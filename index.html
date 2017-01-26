@@ -13,8 +13,6 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
 
-    <link href="../css/chap1bis.css" rel="stylesheet">
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -34,16 +32,35 @@
         width: 100%;
       }
 
+      /* Styles pour les smartphones */
+      /* JULIEN: pour faire des boutons ronds */
       .btn-round {
         border-radius: 50%;
       }
 
-      /* Styles pour les smartphones */
       #left, #side1, #side2 {
-        padding: 10px 10px 0 10px;
+        padding: 0px 0px 0 0px;
       }
-      .row{
+
+      .rowPadding{
         text-align: center;
+        padding: 10px 0px 0px 0px;
+      }
+
+      #side1 {
+        padding: 14px 0px 0px 0px;
+      } 
+
+      #side1 img{
+        width: 96%;
+      }
+
+      #side2 {
+        padding: 14px 0px 0px 0px;
+      }
+
+      #side2 img{
+        width: 96%;
       }
 
       /* Styles pour les tablettes */
@@ -52,11 +69,21 @@
           padding: 0;
         } 
         #side1 {
-          padding: 10px 5px 0 0;
+          padding: 14px 0px 0px 0px;
         } 
-        #side2 {
-          padding: 10px 0 0 5px;
+
+        #side1 img{
+          width: 92%;
         }
+
+        #side2 {
+          padding: 14px 0px 0px 0px;
+        }
+
+        #side2 img{
+          width: 92%;
+        }
+
         .row{
           text-align: center;
         }
@@ -64,16 +91,30 @@
 
       /* Styles pour les écrans moyens et grands */
       @media (min-width: 992px) {
-        #side1, #side2 {
-          padding: 0 0 10px 10px;}
+        #side1{
+          padding: 0px 0px 14px 0px;
+        }
+
+        #side1 img{
+          width: 93%;
+        }
+
+        #side2 {
+          margin: 0px 0px 0px 0px;
+        }
+
+        #side2 img{
+          width: 93%;
+        }
+
         .row{
         text-align: center;
-      }
+        }
         } 
 
       /* JULIEN: pour centrage du logo avec le titre */
         #titreEntete{
-          padding: 10px 0px 0px 0px;
+          padding: 10px 0px 0px 0px; 
         }
 
       }
@@ -86,7 +127,7 @@
     <div class="container"> <!-- debut CONTAINER -->
 
       <header>
-        <div class="row"> 
+        <div class="row rowPadding"> 
             <div class="col-sm-2 col-md-2 hidden-xs">
               <a href="#"><img src="assets/img/maison.png" alt="logo"></a>
             </div>
@@ -96,7 +137,7 @@
           </div>    
       </header>
 
-      <nav class="row">
+      <nav class="row rowPadding">
         <div class="col-sm-12 col-md-8">
           <div id="left">
             <a href="#"><img src="assets/img/city1.jpg" alt="Nos réalisations"></a>
@@ -114,7 +155,7 @@
         </div>
       </nav>
 
-      <footer class="row">
+      <footer class="row rowPadding">
             <a class="btn btn-primary btn-round" href="#"><i class="fa fa-twitter fa-2x"></i></a>
             <a class="btn btn-primary btn-round" href="#"><i class="fa fa-facebook fa-2x"></i></a>
             <a class="btn btn-primary btn-round" href="#"><i class="fa fa-google-plus fa-2x"></i></a>
@@ -124,5 +165,8 @@
 
     </div><!-- fin CONTAINER -->
   </body>
+
+  <!-- JULIEN: script pour que les colonnes aient la meme hauteur si on le souhaite (facilement !) -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"><script>
 
 </html>
